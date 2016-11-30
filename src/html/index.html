@@ -1,0 +1,33 @@
+{#
+  Nunjucks Templating!
+  Homepage: https://mozilla.github.io/nunjucks/
+  Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+  <div class="container">
+    <div class="row map__intro">
+      <h1>Opioid overdoses in virtually every corner of Miami-Dade</h1>
+      <p>
+        The majority of the 232 people who fatally overdosed in Miami-Dade County with heroin, fentanyl or both in their blood were young white men from January 2015 through September 2016. Overtown in particular, etc... intro.
+      </p>
+    </div>
+    <div class="row">
+      <img class="map__legend" src="images/map-legend.svg" alt="Map legend">
+    </div>
+    <div class="row">
+      <div id="airbnb-map" class="js-map map" data-url="https://chrisdubya.carto.com/api/v2/viz/8ea72d4c-90b4-11e6-89ea-0e3ebc282e83/viz.json"></div>
+    </div>
+    <div class="row">
+      <p class="citations__source">
+        Source: Miami-Dade Medical Examiner's office
+      </p>
+      <p class="citations__credit">KARA DAPENA kdapena@miamiherald.com</p>
+    </div>
+    <div class="row">
+      <div class="citations__border"></div>
+    </div>
+  </div>
+{% endblock %}

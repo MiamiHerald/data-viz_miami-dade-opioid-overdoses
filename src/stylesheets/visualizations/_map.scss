@@ -1,0 +1,13 @@
+.map {
+  margin: 1rem 0;
+
+  &__intro {
+    border-top: 2px dotted #CCC;
+  }
+
+  &__legend {
+    max-width: em(500);
+    margin: 0 auto;
+    display: block;
+  }
+}
