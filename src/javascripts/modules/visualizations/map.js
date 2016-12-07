@@ -7,17 +7,17 @@ class Map {
   constructor(el, dataUrl) {
     this.el = el;
     this.dataUrl = dataUrl;
-    this.aspectRatio = 0.75;
+    this.aspectRatio = 0.6;
     this.width = $(this.el).width();
     this.height = Math.ceil(this.aspectRatio * this.width);
-    this.lat = 25.748503;
-    this.lon = -80.286949;
+    this.lat = 25.71;
+    this.lon = -80.3;
     this.pymChild = null;
     this.mediumScreenUp = Modernizr.mq('(min-width: 700px)');
     if (this.mediumScreenUp) {
-      this.zoom = 11;
-    } else {
       this.zoom = 10;
+    } else {
+      this.zoom = 9;
     }
   }
 
@@ -26,7 +26,7 @@ class Map {
       this.pymChild = new pym.Child({ renderCallback: this.resizeMap.bind(this) });
     });
     $(window).on(`resize`, this.resizeMap.bind(this));
-    
+
     this.drawMap();
   }
 
@@ -44,7 +44,7 @@ class Map {
   }
 
   drawMap() {
-    cartodb.createVis(`airbnb-map`, this.dataUrl, {
+    cartodb.createVis(`opioid-map`, this.dataUrl, {
         shareable: false,
         title: false,
         description: false,

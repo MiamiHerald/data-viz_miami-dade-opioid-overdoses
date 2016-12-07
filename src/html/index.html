@@ -9,22 +9,29 @@
 {% block content %}
   <div class="container">
     <div class="row map__intro">
-      <h1>Opioid overdoses in virtually every corner of Miami-Dade</h1>
+      <h1>High concentration of fatal overdoses in Overtown</h1>
       <p>
-        The majority of the 232 people who fatally overdosed in Miami-Dade County with heroin, fentanyl or both in their blood were young white men from January 2015 through September 2016. Overtown in particular, etc... intro.
+        The majority of the 236 people who fatally overdosed in Miami-Dade County with heroin, fentanyl or both in their blood were young white men (regardless of Hispanic origin) from January 2015 through November 2016. The crisis is particularly pronounced in Overtown, a predominantly black neighborhood where over 90 percent of the deaths were white people from outside the community.
       </p>
     </div>
     <div class="row">
       <img class="map__legend" src="images/map-legend.svg" alt="Map legend">
     </div>
     <div class="row">
-      <div id="airbnb-map" class="js-map map" data-url="https://kdapena.carto.com/api/v2/viz/885ae25c-b58b-11e6-9439-0e3ebc282e83/viz.json"></div>
+      <div id="opioid-map" class="js-map map" data-url="https://kdapena.carto.com/api/v2/viz/885ae25c-b58b-11e6-9439-0e3ebc282e83/viz.json"></div>
+    </div>
+    <div class="row">
+      <p class="citations__note">
+        Note: {{ note }}
+      </p>
     </div>
     <div class="row">
       <p class="citations__source">
-        Source: Miami-Dade Medical Examiner's office
+        Source: {{ source }}
       </p>
-      <p class="citations__credit">KARA DAPENA kdapena@miamiherald.com</p>
+      <p class="citations__credit">
+        {{ credit }}
+      </p>
     </div>
     <div class="row">
       <div class="citations__border"></div>

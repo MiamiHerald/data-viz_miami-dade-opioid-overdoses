@@ -1,11 +1,18 @@
 .citations {
+  &__note,
   &__credit,
   &__source {
     font-size: rem(11);
     padding: 0 0 5px 0;
     margin: 0;
+  }
 
+  &__credit,
+  &__source {
     @include span-columns(6 of 12);
+    @include media(max-width $small) {
+      @include span-columns(12 of 12);
+    }
   }
 
   &__credit {
